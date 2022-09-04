@@ -15,7 +15,7 @@ struct WorkoutsListView: View {
     @ObservedResults(DailyWorkout.self) var workouts
     @State private var newWorkoutData = DailyWorkout.Data()
     @State private var currentWorkout = DailyWorkout()
-    @State  var isPresented = false
+    @State var isPresented = false
     
     
     func colorize(type: String) -> Color {
@@ -40,7 +40,7 @@ struct WorkoutsListView: View {
                 if let workouts = workouts {
                     ForEach(workouts) { workout in
                         NavigationLink(
-                            destination: WorkoutDetailView(workout: workout)) {
+                            destination: WorkoutDetailView(workout: DailyWorkout())) {
                                 WorkoutCellView(workout: workout)
                             }
                     }

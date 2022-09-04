@@ -11,15 +11,11 @@ import RealmSwift
 struct WorkoutDetailView: View {
     //JWD:  PROPERTIES
     @State private var isPresented: Bool = false
-    //JWD:  PROPERTIES
-    @State private var data = DailyWorkout.Data()
-    @State private var newExercise = ""
-    
     let workout: DailyWorkout
+    @State private var data = DailyWorkout.Data()
     
-    //JWD:  WORKOUT TYPES
-    let types = ["HIIT", "Cardio", "Strength", "Power"]
-    
+   
+   
     func colorize(type: String) -> Color {
         switch type {
         case "HIIT":
@@ -85,13 +81,31 @@ struct WorkoutDetailView: View {
                 
                         .accessibilityElement(children: .ignore)
                         
-                    }//: #endOf Section
+                    }// #endOf Section
                     Section(header: Text("Exercises")) {
                         ForEach(workout.exercises, id: \.self) {
                             exercise in
                             Label(exercise, systemImage: "target")
                                 .accessibilityLabel(Text("target"))
                                 .accessibilityValue(Text(exercise))
+                        }
+                    }// #endOf Section
+                    Section(header: Text("Past Workouts")) {
+                        if workout.history.isEmpty {
+                            Label("No completed workouts", systemImage: "calendar.badge.exclamationmark")
+                        }
+                        ForEach(workout.history) { history in
+                            NavigationLink(destination:
+                                            HistoryView(history: history)) {
+                                HStack {
+                                    Image(systemName: "calendar")
+                                    if let date = history.date {
+                                        Text(date, style: .date)
+                                    } else {
+                                        Text("Date is missing")
+                                    }
+                                }
+                            }
                         }
                     }
                              

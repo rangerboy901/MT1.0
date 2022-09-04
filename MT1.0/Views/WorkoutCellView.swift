@@ -42,7 +42,7 @@ struct WorkoutCellView: View {
             Text(workout.objective)
                 .font(.footnote)
                 .fontWeight(.semibold)
-                .foregroundColor(.blue)
+                .foregroundColor(self.colorize(type: workout.type))
                 .accessibilityLabel("\(workout.objective)Workout Description")
             
             HStack{

@@ -15,16 +15,20 @@ class DailyWorkout: Object, ObjectKeyIdentifiable {
     @Persisted var objective = ""
     @Persisted var type = "HIIT"
     @Persisted var exerciseList = RealmSwift.List<String>()
+    @Persisted var historyList = RealmSwift.List<History>()
     
     var exercises: [String] { Array(exerciseList) }
+    var history: [History] { Array(historyList) }
    
-    convenience init(title: String,objective: String,type: String, exercises: [String]) {
+    convenience init(title: String,objective: String,type: String, exercises: [String], history: [History] = []) {
         self.init()
         self.title = title
         self.objective = objective
         self.type = type
         exerciseList.append(objectsIn: exercises)
-       
+        for entry in history {
+            self.historyList.insert(entry, at: 0)
+        }
     }
 }
 extension DailyWorkout {

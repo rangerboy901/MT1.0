@@ -26,6 +26,8 @@
 		4A7C7C1F28C3F447000E9A9F /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7C7C1E28C3F447000E9A9F /* ClockView.swift */; };
 		4A7C7C2128C3F489000E9A9F /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7C7C2028C3F489000E9A9F /* ClockViewModel.swift */; };
 		4A7C7C2328C3F55C000E9A9F /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7C7C2228C3F55C000E9A9F /* HistoryView.swift */; };
+		4A7C7C2528C40D16000E9A9F /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7C7C2428C40D16000E9A9F /* HistoryModel.swift */; };
+		4A7C7C2828C40E4C000E9A9F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7C7C2728C40E4C000E9A9F /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		4A7C7C1E28C3F447000E9A9F /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		4A7C7C2028C3F489000E9A9F /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
 		4A7C7C2228C3F55C000E9A9F /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		4A7C7C2428C40D16000E9A9F /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		4A7C7C2728C40E4C000E9A9F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 		4A7C7BDE28C3E2AF000E9A9F /* MT1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				4A7C7C2628C40E14000E9A9F /* Extensions */,
 				4A7C7C1028C3E8C1000E9A9F /* Models */,
 				4A7C7BDF28C3E2AF000E9A9F /* MT1_0App.swift */,
 				4A7C7C1128C3E8D0000E9A9F /* Views */,
@@ -158,6 +163,7 @@
 			children = (
 				4A7C7C1228C3E8EA000E9A9F /* DailyWorkout.swift */,
 				4A7C7C2028C3F489000E9A9F /* ClockViewModel.swift */,
+				4A7C7C2428C40D16000E9A9F /* HistoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +181,14 @@
 				4A7C7C2228C3F55C000E9A9F /* HistoryView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4A7C7C2628C40E14000E9A9F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4A7C7C2728C40E4C000E9A9F /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,10 +333,12 @@
 				4A7C7C1928C3EF40000E9A9F /* WorkoutCellView.swift in Sources */,
 				4A7C7C1B28C3EF54000E9A9F /* WorkoutDetailView.swift in Sources */,
 				4A7C7BE228C3E2AF000E9A9F /* ContentView.swift in Sources */,
+				4A7C7C2828C40E4C000E9A9F /* Color.swift in Sources */,
 				4A7C7C1328C3E8EA000E9A9F /* DailyWorkout.swift in Sources */,
 				4A7C7C2328C3F55C000E9A9F /* HistoryView.swift in Sources */,
 				4A7C7C1528C3EE3B000E9A9F /* WorkoutsListView.swift in Sources */,
 				4A7C7BE028C3E2AF000E9A9F /* MT1_0App.swift in Sources */,
+				4A7C7C2528C40D16000E9A9F /* HistoryModel.swift in Sources */,
 				4A7C7C1F28C3F447000E9A9F /* ClockView.swift in Sources */,
 				4A7C7C1728C3EF09000E9A9F /* WorkoutEditView.swift in Sources */,
 				4A7C7C2128C3F489000E9A9F /* ClockViewModel.swift in Sources */,
